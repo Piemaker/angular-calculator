@@ -1,0 +1,11 @@
+<ul>
+  <li
+  *ngFor="let menuItem of MenuData"
+    [class]="(isSelected === menuItem.command) ? 'active' : ''"
+    [style.float]="menuItem.IsFloatingRight ? 'right' : 'left'"
+  >
+    <a href="#{{ menuItem.command }}" (click)="HandleMenuClick(menuItem)">{{
+      menuItem.header
+    }}</a>
+  </li>
+</ul>

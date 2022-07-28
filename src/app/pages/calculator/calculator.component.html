@@ -1,0 +1,13 @@
+<table border="1">
+  <tr>
+    <td colspan="4">
+      <input [value]="inpValue" type="text" />
+    </td>
+  </tr>
+  <tr *ngFor="let row of metaData">
+  
+    <td *ngFor="let cell of row" [attr.colspan]="(cell === '=') ? '2' : '1'">
+      <button (click)="handleClick(cell)">{{ cell }}</button>
+    </td>
+  </tr>
+</table>
